@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Roboto Flex";
+  src: url("@/assets/fonts/RobotoFlex-Variable.ttf") format("truetype");
+  font-weight: 100 1000;
+  font-display: swap;
+}
+
+@theme {
+  --font-roboto: "Roboto Flex", sans-serif;
+}
+
+:root {
+  font-family: var(--font-roboto);
+}
