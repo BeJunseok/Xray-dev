@@ -23,6 +23,7 @@ export default [
       "react/jsx-no-target-blank": ["error", { allowReferrer: true }],
       "react/prop-types": "off",
       "@typescript-eslint/no-unused-vars": "warn",
+      "@typescript-eslint/no-explicit-any": "off",
     },
   },
   eslintConfigPrettier,
