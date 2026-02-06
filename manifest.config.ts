@@ -20,14 +20,16 @@ export default defineManifest({
     },
     default_popup: "src/popup/index.html",
   },
-  permissions: ["sidePanel", "contentSettings"],
+  permissions: ["contentSettings", "activeTab", "scripting", "storage"],
   content_scripts: [
     {
       js: ["src/content/main.tsx"],
-      matches: ["https://*/*"],
+      matches: ["<all_urls>"],
     },
   ],
-  side_panel: {
-    default_path: "src/sidepanel/index.html",
+  background: {
+    service_worker: "src/background/serviceWorker.ts",
+    type: "module",
   },
 });
+
